@@ -14,8 +14,8 @@ import socket
 import threading
 import logging
 
-from ibapi.common import *
-from ibapi.errors import *
+from zipline.gens.brokers.ibapi.common import *
+from zipline.gens.brokers.ibapi.errors import *
 
 
 #TODO: support SSL !!

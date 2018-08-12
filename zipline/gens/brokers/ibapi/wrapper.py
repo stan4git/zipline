@@ -18,15 +18,14 @@ message use the 'unified version': the agreed up min version of both
 server and client.
 
 """
-
-from ibapi.common import *
-from ibapi.utils import *
-from ibapi.contract import (Contract, ContractDetails, DeltaNeutralContract)
-from ibapi.order import Order
-from ibapi.order_state import OrderState
-from ibapi.execution import Execution
-from ibapi.ticktype import *
-from ibapi.commission_report import CommissionReport
+from zipline.gens.brokers.ibapi.commission_report import CommissionReport
+from zipline.gens.brokers.ibapi.contract import (Contract, ContractDetails, DeltaNeutralContract)
+from zipline.gens.brokers.ibapi.order import Order
+from zipline.gens.brokers.ibapi.order_state import OrderState
+from zipline.gens.brokers.ibapi.execution import Execution
+from zipline.gens.brokers.ibapi.ticktype import *
+from zipline.gens.brokers.ibapi.common import *
+from zipline.gens.brokers.ibapi.utils import *
 
 
 class EWrapper:

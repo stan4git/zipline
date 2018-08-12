@@ -17,18 +17,18 @@ import logging
 import queue
 import socket
 
-from ibapi import (decoder, reader, comm)
-from ibapi.connection import Connection
-from ibapi.message import OUT
-from ibapi.common import *
-from ibapi.contract import Contract
-from ibapi.order import Order
-from ibapi.execution import ExecutionFilter
-from ibapi.scanner import ScannerSubscription
-from ibapi.comm import (make_field, make_field_handle_empty)
-from ibapi.utils import (current_fn_name, BadMessage)
-from ibapi.errors import *
-from ibapi.server_versions import *
+from zipline.gens.brokers.ibapi import (decoder, reader, comm)
+from zipline.gens.brokers.ibapi.connection import Connection
+from zipline.gens.brokers.ibapi.message import OUT
+from zipline.gens.brokers.ibapi.contract import Contract
+from zipline.gens.brokers.ibapi.order import Order
+from zipline.gens.brokers.ibapi.execution import ExecutionFilter
+from zipline.gens.brokers.ibapi.scanner import ScannerSubscription
+from zipline.gens.brokers.ibapi.comm import (make_field, make_field_handle_empty)
+from zipline.gens.brokers.ibapi.utils import (current_fn_name, BadMessage)
+from zipline.gens.brokers.ibapi.common import *
+from zipline.gens.brokers.ibapi.errors import *
+from zipline.gens.brokers.ibapi.server_versions import *
 
 #TODO: use pylint
 

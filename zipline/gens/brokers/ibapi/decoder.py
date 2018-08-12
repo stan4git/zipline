@@ -10,27 +10,26 @@ It will call the corresponding method from the EWrapper so that customer's code
 (eg: class derived from EWrapper) can make further use of the data.
 """
 
-
-from ibapi import order_condition
-from ibapi.message import IN
-from ibapi.wrapper import *
-from ibapi.order import Order
-from ibapi.order import OrderComboLeg
-from ibapi.contract import Contract
-from ibapi.contract import ContractDescription
-from ibapi.contract import DeltaNeutralContract
-from ibapi.contract import ComboLeg
-from ibapi.execution import Execution
-from ibapi.order_state import OrderState
-from ibapi.server_versions import *
-from ibapi.utils import *
-from ibapi.softdollartier import SoftDollarTier
-from ibapi.ticktype import *
-from ibapi.tag_value import TagValue
-from ibapi.scanner import ScanData
-from ibapi.commission_report import CommissionReport
-from ibapi.errors import BAD_MESSAGE
-from ibapi.common import *
+from zipline.gens.brokers.ibapi import order_condition
+from zipline.gens.brokers.ibapi.message import IN
+from zipline.gens.brokers.ibapi.wrapper import *
+from zipline.gens.brokers.ibapi.order import Order
+from zipline.gens.brokers.ibapi.order import OrderComboLeg
+from zipline.gens.brokers.ibapi.contract import Contract
+from zipline.gens.brokers.ibapi.contract import ContractDescription
+from zipline.gens.brokers.ibapi.contract import DeltaNeutralContract
+from zipline.gens.brokers.ibapi.contract import ComboLeg
+from zipline.gens.brokers.ibapi.execution import Execution
+from zipline.gens.brokers.ibapi.order_state import OrderState
+from zipline.gens.brokers.ibapi.server_versions import *
+from zipline.gens.brokers.ibapi.utils import *
+from zipline.gens.brokers.ibapi.softdollartier import SoftDollarTier
+from zipline.gens.brokers.ibapi.ticktype import *
+from zipline.gens.brokers.ibapi.tag_value import TagValue
+from zipline.gens.brokers.ibapi.scanner import ScanData
+from zipline.gens.brokers.ibapi.commission_report import CommissionReport
+from zipline.gens.brokers.ibapi.errors import BAD_MESSAGE
+from zipline.gens.brokers.ibapi.common import *
 
 class HandleInfo(Object):
     def __init__(self, wrap=None, proc=None):

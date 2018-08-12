@@ -4,11 +4,11 @@ and conditions of the IB API Non-Commercial License or the IB API Commercial Lic
 """
 
 
-from ibapi import comm
-from ibapi.common import UNSET_DOUBLE
-from ibapi.object_implem import Object
-from ibapi.enum_implem import Enum
-from ibapi.utils import decode
+from zipline.gens.brokers.ibapi import comm
+from zipline.gens.brokers.ibapi.common import UNSET_DOUBLE
+from zipline.gens.brokers.ibapi.object_implem import Object
+from zipline.gens.brokers.ibapi.enum_implem import Enum
+from zipline.gens.brokers.ibapi.utils import decode
 
 #TODO: add support for Rebate, P/L, ShortableShares conditions 
 

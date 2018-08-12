@@ -12,7 +12,7 @@ and conditions of the IB API Non-Commercial License or the IB API Commercial Lic
 """
 
 
-from ibapi.object_implem import Object
+from zipline.gens.brokers.ibapi.object_implem import Object
 
 
 (SAME_POS, OPEN_POS, CLOSE_POS, UNKNOWN_POS) = range(4)
