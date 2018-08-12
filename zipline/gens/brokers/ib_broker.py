@@ -367,7 +367,7 @@ class TWSConnection(EClientSocket, EWrapper):
             "total: {cum_qty} @ ${avg_price} "
             "exec_id: {exec_id} by client-{client_id}".format(
                 order_id=order_id, exec_id=exec_id,
-                exec_time=pd.to_datetime(exec_detail.m_time),
+                exec_time=pd.to_datetime(exec_detail.m_time, infer_datetime_format=True),
                 symbol=contract.m_symbol,
                 shares=exec_detail.m_shares,
                 price=exec_detail.m_price,
