@@ -76,3 +76,9 @@ TAGS
 # Compiled files
 *.pyd
 .pydevproject
+
+# Algorithm state files
+*.state
+
+# Backtest result files
+*.pickle

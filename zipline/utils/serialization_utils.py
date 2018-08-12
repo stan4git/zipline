@@ -15,6 +15,7 @@
 
 from six import BytesIO
 import pickle
+import os
 from functools import partial
 
 from zipline.assets import AssetFinder
@@ -107,7 +108,7 @@ def store_context(state_file_path, context, checksum, exclude_list):
         state[field] = getattr(context, field)
 
     state[CHECKSUM_KEY] = checksum
-
+    os.makedirs(os.path.dirname(state_file_path), exist_ok=True)
     with open(state_file_path, 'wb') as f:
         # Forcing v2 protocol for compatibility between py2 and py3
         pickle.dump(state, f, protocol=2)
