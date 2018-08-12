@@ -72,3 +72,7 @@ zipline.iml
 .idea
 
 TAGS
+
+# Compiled files
+*.pyd
+.pydevproject
