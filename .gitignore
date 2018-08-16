@@ -82,3 +82,6 @@ TAGS
 
 # Backtest result files
 *.pickle
+
+# Virtualenv
+env/
