@@ -109,7 +109,7 @@ def ipython_only(option):
     '-f',
     '--algofile',
     default=None,
-    type=click.File('r'),
+    type=click.File('r', encoding="utf8"),
     help='The file that contains the algorithm to run.',
 )
 @click.option(

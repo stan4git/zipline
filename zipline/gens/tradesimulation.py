@@ -17,6 +17,7 @@ from logbook import Logger, Processor
 from pandas.tslib import normalize_date
 from zipline.protocol import BarData
 from zipline.utils.api_support import ZiplineAPI
+from zipline.api import *
 from six import viewkeys
 
 from zipline.gens.sim_engine import (

@@ -136,8 +136,7 @@ from zipline.sources.requests_csv import PandasRequestsCSV
 from zipline.gens.sim_engine import MinuteSimulationClock
 from zipline.sources.benchmark_source import BenchmarkSource
 from zipline.zipline_warnings import ZiplineDeprecationWarning
-
-
+from zipline.api import *
 log = logbook.Logger("ZiplineLog")
 
 
@@ -208,7 +207,6 @@ class TradingAlgorithm(object):
         to conditionally execute code based on platform it is running on.
         default: 'zipline'
     """
-
     def __init__(self, *args, **kwargs):
         """Initialize sids and other state variables.
 
@@ -249,6 +247,7 @@ class TradingAlgorithm(object):
                 Any asset identifiers that are not provided in the
                 equities_metadata, but will be traded by this TradingAlgorithm
         """
+        
         self.sources = []
 
         # List of trading controls to be used to validate orders.
@@ -256,10 +255,9 @@ class TradingAlgorithm(object):
 
         # List of account controls to be checked on each bar.
         self.account_controls = []
-
+            
         self._recorded_vars = {}
         self.namespace = kwargs.pop('namespace', {})
-
         self._platform = kwargs.pop('platform', 'zipline')
 
         self.logger = None

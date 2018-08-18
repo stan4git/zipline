@@ -1,2 +1,1 @@
 from jqdatasdk import *
-auth('','')

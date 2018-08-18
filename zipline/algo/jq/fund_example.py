@@ -7,8 +7,14 @@ import numpy as np
 import datetime as dt
 import math
 import talib
+from zipline.api import *
+from zipline.finance.commission import *
 
 def initialize(context):
+    class Object:
+        pass
+    
+    g = Object()
     # 策略参考标准
     set_benchmark('000001.XSHG')
     g.origin='399001.XSHE'
@@ -231,14 +237,14 @@ def print_win_rate(current_date, print_date, context):
         total_profit = statis_total_profit(context)
         if len(most_win)==0 or len(most_loss)==0:
             return
-        print "-"
-        print '------------绩效报表------------'
-        print '交易次数: {0}, 盈利次数: {1}, 胜率: {2}'.format(g.trade_total_count, g.trade_success_count, str(win_rate * 100) + str('%'))
-        print '单次盈利最高: {0}, 盈利比例: {1}%'.format(most_win['stock'], most_win['value'])
-        print '单次亏损最高: {0}, 亏损比例: {1}%'.format(most_loss['stock'], most_loss['value'])
-        print '总资产: {0}, 本金: {1}, 盈利: {2}'.format(starting_cash + total_profit, starting_cash, total_profit)
-        print '--------------------------------'
-        print "-"
+        print("-")
+        print('------------绩效报表------------')
+        print('交易次数: {0}, 盈利次数: {1}, 胜率: {2}'.format(g.trade_total_count, g.trade_success_count, str(win_rate * 100) + str('%')))
+        print('单次盈利最高: {0}, 盈利比例: {1}%'.format(most_win['stock'], most_win['value']))
+        print('单次亏损最高: {0}, 亏损比例: {1}%'.format(most_loss['stock'], most_loss['value']))
+        print('总资产: {0}, 本金: {1}, 盈利: {2}'.format(starting_cash + total_profit, starting_cash, total_profit))
+        print('--------------------------------')
+        print("-")
 
 # 统计单次盈利最高的股票
 def statis_most_win_percent():
